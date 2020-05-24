@@ -3,13 +3,13 @@
     <svg width="960" height="600" >
     </svg>
     <div class="peizhi">
-      <h3>配置表格</h3>
+      <h3>添加词条</h3>
       <!-- <div style="margin-top:20px;">
         产品名称：
         <el-input v-model="name" class="input" placeholder="请输入产品名称" clearable></el-input>
       </div> -->
       <div style="margin-top:20px;">
-        产品数量：
+        <!-- 添加词条： -->
         <el-input v-model="value" class="input" placeholder="请输入数量" clearable></el-input>
       </div>
       <el-button style="margin-top:100px;" round type="primary" @click="add">添加</el-button>
@@ -27,6 +27,7 @@ export default {
     return {
         data:["dapeng","haha","66666","zhutou"],
         value:"",
+        list:[]
     };
   },
   mounted() {
@@ -43,12 +44,12 @@ export default {
         
 
         // new
-
+  let data1 = this.list.length>0?this.list:this.data;
   const color = d3.scaleOrdinal(d3.schemeCategory10);
   const layout = cloud()
     .size([500, 500])
     .words(
-      this.data.map(function(d) {
+      data1.map(function(d) {
         return { text: d, size: 10 + Math.random() * 90 };
       })
     )
@@ -91,8 +92,10 @@ export default {
 
     },
      add: function() {
-      var list = this.value.split(' ');
-          this.data.concat(list);
+      this.list = this.value.split(' ');
+      console.log('list :'+this.list);
+          // this.data.concat(this.value.split(' '));
+          // console.log(this.data);
       this.show();
     }
   }

@@ -39,7 +39,7 @@ export default {
       var myChart = echarts.init(document.getElementById("main"));
       // 绘制图表
       myChart.setOption({
-        title: { text: "ECharts 入门示例" },
+        title: { text: "柱状图展示" },
         tooltip: {},
         xAxis: {
           data: this.Xdata
@@ -56,9 +56,13 @@ export default {
       this.bool="隐藏";
     },
     add: function() {
+      if(this.name!=""){
       this.Xdata.push(this.name);
       this.Vdata.push(this.value);
       this.show();
+      }else{
+         this.$message.error('请输入商品名称');
+      }
     }
   }
 };

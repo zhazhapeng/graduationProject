@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/Login'
 import chinaMapdeep from '@/components/chinaMapdeep'
-import Card from '@/components/Card'
+// import Card from '@/components/Card'
 import Home from '@/components/Home'
 import Circle from '@/components/Circle'
 import Line from '@/components/Line'
@@ -36,11 +36,11 @@ export default new Router({
       name: 'chinaMapdeep',
       component: chinaMapdeep
     },
-    {
-      path: '/card',
-      name: 'card',
-      component: Card
-    },
+    // {
+    //   path: '/card',
+    //   name: 'card',
+    //   component: Card
+    // },
     {
       path: '/line',
       name: 'Line',

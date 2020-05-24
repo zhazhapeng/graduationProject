@@ -7,12 +7,12 @@
     </div>
     <div class="peizhi">
       <h3>配置表格</h3>
-      <div style="margin-top:20px;">
+      <!-- <div style="margin-top:20px;">
         产品名称：
         <el-input v-model="name" class="input" placeholder="请输入产品名称" clearable></el-input>
-      </div>
+      </div> -->
       <div style="margin-top:20px;">
-        产品数量：
+        下一秒成交数量：
         <el-input v-model="value" class="input" placeholder="请输入数量" clearable></el-input>
       </div>
       <el-button style="margin-top:100px;" round type="primary" @click="add">添加</el-button>
@@ -53,7 +53,6 @@ export default {
         var time =new Date();
         var now = [time.getHours(),time.getMinutes(),time.getSeconds()].join(":");
         date.push(now);
-        // console.log("lastData :  "+data[data.length - 1]);
         var lastData = data[data.length - 1];
         if(tValue!=0){
           data.push(tValue);

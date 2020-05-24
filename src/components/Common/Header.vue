@@ -11,7 +11,7 @@
         background-color="#303133"
         text-color="#fff"
         active-text-color="#ffd04b">
-         大鹏的毕设
+         <img style="width: 35px;height: 35px;margin-top: 15px;position: absolute;margin-left:-40px;" src="./he.png" alt="河大">基于vue的数据可视化研究
         <!-- <el-menu-item v-for="(list, index) in headerList" index="list.id" :key="list.id">
               <router-link :to="{name:list.name}">
                 {{ list.title }}

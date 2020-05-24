@@ -41,7 +41,7 @@ export default {
       var option = {
           animation: false,
           legend: {
-              data: ['scatter', 'scatter2', 'scatter3']
+              data: ['微生物1', '微生物2', '微生物3']
           },
           tooltip: {
           },
@@ -92,7 +92,7 @@ export default {
           ],
           series: [
               {
-                  name: 'scatter',
+                  name: '微生物1',
                   type: 'scatter',
                   itemStyle: {
                       normal: {
@@ -105,7 +105,7 @@ export default {
                   data: data1
               },
               {
-                  name: 'scatter2',
+                  name: '微生物2',
                   type: 'scatter',
                   itemStyle: {
                       normal: {
@@ -118,7 +118,7 @@ export default {
                   data: data2
               },
               {
-                  name: 'scatter3',
+                  name: '微生物3',
                   type: 'scatter',
                   itemStyle: {
                       normal: {
